@@ -81,15 +81,15 @@ void setup() {
   oled.setCursor(106, 4);
   oled.print("o");
   oled.setCursor(100, 5);
-  oled.print("/|/");
+  oled.print("\\|\\");
   oled.setCursor(100, 6);
   oled.print("/ \\");
 
-  oled.setCursor(14, 4);
+  oled.setCursor(14, 3);
   oled.print("o");
-  oled.setCursor(8, 5);
+  oled.setCursor(8, 4);
   oled.print("\\|\\");
-  oled.setCursor(8, 6);
+  oled.setCursor(8, 5);
   oled.print("/ \\");
 }
 
@@ -143,5 +143,8 @@ void loop() {
     printTime();
     printDate();
     printPomodoro();
+
+    oled.setCursor(0, 7);
+  for(int i=0;i<21;i++)oled.print('-');
   }
 }
