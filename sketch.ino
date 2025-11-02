@@ -78,10 +78,10 @@ void setup() {
   printPomodoro();
   drawSessionText(isWorkSession);
 
-  oled.setCursor(106, 4);
-  oled.print("o");
-  oled.setCursor(100, 5);
-  oled.print("\\|\\");
+  oled.setCursor(100, 4);
+  oled.print("\\o\\");
+  oled.setCursor(106, 5);
+  oled.print("|");
   oled.setCursor(100, 6);
   oled.print("/ \\");
 
