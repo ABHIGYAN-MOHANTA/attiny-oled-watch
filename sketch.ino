@@ -5,9 +5,9 @@
 SSD1306AsciiWire oled;
 
 unsigned long prevMillis = 0;
-int seconds = 0, minutes = 53, hours = 14;
-int dayOfWeek = 0;
-int day = 2, month = 11, year = 2025;
+int seconds = 0, minutes = 0, hours = 4;
+int dayOfWeek = 2;
+int day = 4, month = 11, year = 2025;
 
 const char* daysOfWeek[] = {"Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"};
 
@@ -91,6 +91,10 @@ void setup() {
   oled.print("\\|\\");
   oled.setCursor(8, 5);
   oled.print("/ \\");
+
+  // Draw bottom line once in setup
+  oled.setCursor(0, 7);
+  for(int i=0;i<21;i++)oled.print('-');
 }
 
 void loop() {
@@ -143,8 +147,5 @@ void loop() {
     printTime();
     printDate();
     printPomodoro();
-
-    oled.setCursor(0, 7);
-  for(int i=0;i<21;i++)oled.print('-');
   }
 }
